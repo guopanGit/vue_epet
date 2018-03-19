@@ -31,6 +31,17 @@
       <li><a href="javascript:">美容香波</a></li>
     </ul>
   </div>
+  <!--<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">首页</div>
+      <div class="swiper-slide">狗狗主粮</div>
+      <div class="swiper-slide">服饰城</div>
+      <div class="swiper-slide">医疗保健</div>
+      <div class="swiper-slide">零食玩具</div>
+      <div class="swiper-slide">日用外出</div>
+      <div class="swiper-slide">美容香波</div>
+    </div>
+  </div>-->
 </div>
 </template>
 
