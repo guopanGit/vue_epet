@@ -6,9 +6,11 @@
       </span>
       <span>首页</span>
     </div>
-    <div class="item_icon" @click="goto('/classification')" :class="{on: isCurrent('/classification')}">
+    <div class="item_icon" @click="goto('/classification')"
+         :class="{on: isCurrent('/classification/classify') || isCurrent('/classification/brand')}">
       <span class="item_icon">
-        <i class="iconfont icon-fenlei" :class="{on: isCurrent('/classification')}"></i>
+        <i class="iconfont icon-fenlei"
+           :class="{on: isCurrent('/classification/classify') || isCurrent('/classification/brand')}"></i>
       </span>
       <span>分类</span>
     </div>

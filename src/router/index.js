@@ -8,6 +8,9 @@ import Home from '../pages/Home/Home.vue'
 import Classification from '../pages/Classification/Classification.vue'
 import Shopping from '../pages/Shopping/Shopping.vue'
 import Personal from '../pages/Personal/Personal.vue'
+import Classify from '../pages/Classification/Classify/Classify.vue'
+import Brand from '../pages/Classification/Brand/Brand.vue'
+import Allbrand from '../pages/Allbrand/Allbrand.vue'
 
 Vue.use(Router)
 
@@ -28,9 +31,27 @@ export default new Router({
     {
       path: '/classification',
       component: Classification,
-      meta:{
-        showFooter: true // 需要显示底部组件
-      }
+      children:[
+        {
+          path: 'classify',
+          component: Classify,
+          meta:{
+            showFooter: true // 需要显示底部组件
+          }
+        },
+
+        {
+          path: 'brand',
+          component: Brand,
+          meta:{
+            showFooter: true // 需要显示底部组件
+          }
+        },
+        {
+          path: '/',
+          redirect: '/classification/classify'
+        }
+      ]
     },
     {
       path: '/shopping',
@@ -38,7 +59,11 @@ export default new Router({
     },
     {
       path: '/personal',
-      component: Personal
+      component: Personal,
+    },
+    {
+      path: '/allbrand',
+      component: Allbrand,
     }
   ]
 })
